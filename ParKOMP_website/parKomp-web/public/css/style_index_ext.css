@@ -1,0 +1,196 @@
+.top{
+    position: relative;
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70.4%;
+    height:60px;
+}
+.stay_label {
+    float: left;
+    position: relative;
+    display: block;
+    /*margin-top: 80px;
+    margin-left: 15%;*/
+
+    padding: 5px 5px 5px 5px;
+    width: 150px;
+    border-radius: 25px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+.stay_label h1{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10px;
+
+    color: black;
+    font-size: 24px;
+}
+.dropdown_sort{
+    font-family: 'jetbrains_monoregular';
+    float:right;
+    position: relative;
+    display: block;
+    margin-top:10px;
+}
+
+.tile{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 5px 5px 5px 5px;
+
+    width: 70%;
+    height: 75px;
+    border-radius: 6px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+
+.tile2{
+    font-size: 15px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 5px 5px 5px 5px;
+
+    width: 70%;
+    height: 75px;
+    border-radius: 6px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+
+.tile_location{
+    position: relative;
+    float: left;
+    margin-left: 4px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-family: 'jetbrains_monoregular';
+    color: black;
+    font-size: 16px;
+}
+
+.tile_date{
+    float: right;
+    margin-right: 4px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-family: 'jetbrains_monoregular';
+    color: #5c5c5c;
+    font-size: 16px;
+}
+
+.tile_line{
+    position: relative;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 99.3%;
+    height: 1px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.tile_car_name{
+    float:left;
+    margin-left: 5px;
+    margin-top: 14px;
+    margin-bottom:0px;
+    font-family: 'jetbrains_monoregular';
+    color: #c9da37;
+    font-size: 24px;
+} 
+.tile_time{
+    float: right;
+    margin-right: 5px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+
+    font-style: italic;
+    font-family: 'jetbrains_monoregular';
+    color: #260a75;
+    font-size: 22px;
+}
+
+select {
+    width: 80px;
+    border-radius: 7px;
+    font-family: 'jetbrains_monoregular';
+    font-size: 17px;
+    border: 5px solid #fcfcfc;
+    height: 34px;
+    z-index: 2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:0px;
+    background: url(/pics/down.png) 96% / 10% no-repeat #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12); 
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* CAUTION: Internet Explorer hacks deteted :D */
+
+select::-ms-expand {
+    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+}
+
+/* Target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background: none\9;
+        padding: 5px\9;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .top{
+       width: 92%;
+    }
+    .tile{
+        height: 65px; 
+        width: 92%;
+    }
+    .tile2{
+        width: 92%;
+    }
+    .tile_location{
+        margin-left: 3px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .tile_date{
+        margin-right: 3px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .tile_line{
+        margin-top: 17px;
+        width: 98.5%;
+    }
+    .tile_car_name{
+        margin-top: 11px;
+    }
+    .tile_time{
+        margin-top: 12px;
+    }
+}

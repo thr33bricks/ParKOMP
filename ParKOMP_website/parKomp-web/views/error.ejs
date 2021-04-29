@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+    <title>ParKOMP - Parking of the future</title>
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_login_reg.css">
+    <link rel='icon' type='image/png' href='/pics/favicon.png'>
+  </head>
+  <body style="overflow: hidden;">
+    <!-- logo -->
+    <img class="logo" src="/pics/parkomp_logo.png" alt="ParKOMP_logo" height="54" width="276">
+    
+    <div class="box">
+      <label style="padding:20px;" for="error" class="err_lbl"><%= messages.error %></label>
+      <input type="submit" name="" value="Ok" onclick="window.location='<%= messages.redir %>';"/>   
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <!-- footer copyright -->
+      <h1 class="footer_text">
+        &copy; <%= l.footer %>
+      </h1>
+    </div>
+  </body>
+</html>

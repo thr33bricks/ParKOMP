@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+    <title>ParKOMP - Parking of the future</title>
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_form.css">
+    <link rel='icon' type='image/png' href='/pics/favicon.png'>
+  </head>
+  <body style="overflow: hidden;">
+    <!-- logo -->
+    <img class="logo" src="/pics/parkomp_logo.png" alt="ParKOMP_logo" height="54" width="276">
+    
+    <div style="min-height: 100%;">
+        <!-- confirmation form -->
+        <div class="box_b">
+            <form action="/delete/<%= car.id %>?_method=DELETE" method="post">
+                <h1><%= l.confirmation %> <%= car.name %>?</h1>
+                <input class="ctue" type="submit" name="" value="<%= l.btn_delete %>">
+            </form>
+            <form action="/cars" method="GET">
+                <input class="ccl" type="submit" class="cancel" value="<%= l.btn_cancel %>">
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <!-- footer copyright -->
+      <h1 class="footer_text">
+        &copy; <%= l.footer %>
+      </h1>
+    </div>
+  </body>
+</html>

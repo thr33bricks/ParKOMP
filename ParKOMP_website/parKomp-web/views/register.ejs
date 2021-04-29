@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYQCFVYRBR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VYQCFVYRBR');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+    <meta name="yandex-verification" content="72c6c9deb15ade13">
+    <meta name="description" content="ParKOMP - Parking system of the future. Create an account now!">
+    <meta name="keywords" content="parkomp, parking, future, ParKOMP, Yordan, Yordanov, login, register, ticketless, eco, easy, fast, reliable, registration, log in">
+    <meta property="og:url" content="https://parkomp.tk/register">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ParKOMP - Parking of the future">
+    <meta property="og:description" content="ParKOMP - Parking system of the future. Create an account now!">
+    <title>ParKOMP - Parking of the future</title>
+    <link rel="canonical" href="https://parkomp.tk/register">
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_login_reg.css">
+    <link rel='icon' type='image/png' href='/pics/favicon.png'>
+    <script type="text/javascript" src="/js/cookie.js"></script>
+   
+    <!-- Yandex.Metrika counter -->
+      <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(72988879, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+        });
+      </script>
+      <noscript><div><img src="https://mc.yandex.ru/watch/72988879" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body style="overflow: hidden;" onload="load()">
+    <img class="logo" src="/pics/parkomp_logo.png" alt="ParKOMP_logo" height="54" width="276">
+    
+    <!-- registration form -->
+    <form name="registerForm" class="box" action="/register" method="post">
+      <h1><%= l.register %></h1>
+
+      <% if (messages.name) { %>
+        <input type="text" id="name" name="name" placeholder="<%= l.nick %>" value="<%= messages.name %>" required>
+      <% }else{%>
+        <input type="text" id="name" name="name" placeholder="<%= l.nick %>" required>
+      <% } %>
+
+      <input type="email" id="email" name="email" placeholder="<%= l.email %>" required>
+      <input type="password" id="password" name="password" placeholder="<%= l.pass %>" required>
+      <input type="submit" name="" value="<%= l.btn_register %>">
+
+      <% if (messages.error) { %>
+         <label class="error "for="error"><%= messages.error %></label>
+         <br></br>
+      <% } %>
+      
+      <a class="redir" href="/login"><%= l.login %></a>
+      
+    </form>
+
+    <!-- cookie banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none">
+      <p style="float:left; margin-left: 15px;margin-bottom: 0px;"><%= l.cookie1 %> <a href='/policy'><%= l.cookie2 %></a>.</p>
+      <button class="close" onclick="close_click()">&times;</button>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+      <!-- footer copyright -->
+      <h2 class="footer_text">
+        &copy; <%= l.footer %>
+      </h1>
+    </div>
+  </body>
+</html>

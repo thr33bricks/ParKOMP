@@ -1,0 +1,9 @@
+{
+    "entr1": {
+        "name": "entr1",
+        "cam_ip": "192.168.43.181",
+        "cam_port": "8080",
+        "cam_height":1080,
+        "cam_width":1920
+    }
+}

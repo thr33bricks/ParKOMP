@@ -1,0 +1,232 @@
+@keyframes move_add {
+    from {bottom: 120px;}
+    to {bottom: 75px;} 
+}
+
+.cars_label {
+    position: relative;
+    display: block;
+    margin-top: 80px;
+    margin-left: 15%;
+
+    padding: 5px 5px 5px 5px;
+    width: 150px;
+    border-radius: 25px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+.cars_label h1{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10px;
+
+    color: black;
+    font-size: 24px;
+}
+.tile{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 5px 5px 5px 5px;
+
+    width: 70%;
+    height: 75px;
+    border-radius: 6px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+.tile2{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    padding: 5px 5px 5px 5px;
+
+    width: 70%;
+    height: 75px;
+    border-radius: 6px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+}
+.tile_carname_label{
+    position: relative;
+    float: left;
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-family: 'jetbrains_monoregular';
+    color: black;
+    font-size: 16px;
+}
+
+.tile_plate_label{
+    float: right;
+    margin-right: 15px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    font-family: 'jetbrains_monoregular';
+    color: black;
+    font-size: 16px;
+}
+
+.tile_line{
+    position: absolute;
+    top: 27px;
+    left:10px;
+    right:54px;
+
+    height: 1px;
+    border-bottom: 1px solid #cccccc;
+    z-index:9;
+}
+.tile_noline{
+    position: relative;
+    margin-top: 22px;
+    width: 100%;
+    height: 1px;
+}
+
+.tile_car_name{
+    float:left;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom:0px;
+    font-family: 'jetbrains_monoregular';
+    color: #c9da37;
+    font-size: 24px;
+}
+.tile_lp{
+    float: right;
+    margin-right: 20px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+
+    font-style: italic;
+    font-family: 'jetbrains_monoregular';
+    color: #260a75;
+    font-size: 22px;
+}
+.tile_btns{
+    position: relative;
+    float: right;
+    z-index:10;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: auto;
+    height:69px;
+    border-radius: 5px;
+    background-color: #c2c2c2;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+.tile_edit{
+    position: relative;
+    display: block;
+    text-transform: none;
+    color: inherit;
+    margin-top: 2px;
+    height: 30px;
+    width: 30px;
+    background: url(/pics/edit.png) 80% / 80% no-repeat;
+    background-position: center;
+}
+.tile_delete{
+    position: relative;
+    display: block;
+    text-transform: none;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    background: url(/pics/delete.png) 80% / 80% no-repeat;
+    background-position: center;
+}
+.add{
+    animation-name: move_add;
+    animation-duration: 0.5s;
+
+    position: fixed;
+
+    bottom: 75px;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+
+    z-index: 10;
+    background-color: #10b918;
+    
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    border-radius: 50%;
+    transition: background-color 0.25s;
+}
+.add:hover{
+    background-color: #79b971;
+}
+.add_pic{
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .cars_label{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tile{
+        height: 65px; 
+        width: 92%;
+    }
+    .tile2{
+        width: 92%;
+    }
+    .tile_btns{
+        margin-right: 0px;
+        margin-top: 0px;
+        height:66px;
+        border-radius: 5px;
+    }
+    .tile_edit{
+        margin-top: 0px;
+    }
+    .tile_delete{
+        margin-top: 3px;
+    }
+    .tile_carname_label{
+        margin-left: 3px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .tile_plate_label{
+        margin-right: 10px;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .tile_line{
+        top: 21px;
+        left: 9px;
+        right: 46px;
+    }
+    .tile_car_name{
+        margin-top: 6px;
+    }
+    .tile_lp{
+        margin-top: 8px;
+        margin-right: 16px;
+    }
+}

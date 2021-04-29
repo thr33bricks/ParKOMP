@@ -1,0 +1,1 @@
+Extended stepper motor library - by Yordan Yordanov, October 2020

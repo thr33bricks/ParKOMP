@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: 
+Allow: /login
+Allow: /
+Allow: /register
+
+Sitemap: https://www.parkomp.tk/sitemap.xml

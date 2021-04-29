@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYQCFVYRBR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VYQCFVYRBR');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+    <title>ParKOMP - Parking of the future</title>
+    <link rel='icon' type='image/png' href='/pics/favicon.png'>
+    <link type="text/css" rel="stylesheet" href="/css/ball.css">
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_index.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_cars.css">
+    <script type="text/javascript" src="/js/cookie.js"></script>   
+    <script type="text/javascript" src="/js/part.js"></script>   
+    <script type="text/javascript" src="/js/nav.js"></script>  
+  </head>
+  <body onload="load();makeParts();">
+    <!-- header -->
+    <div class="header">
+      <!-- menu-side image -->
+      <img class="menu-side" onclick="openNav()" src="/pics/menu.png" alt="Menu_image" height="28" width="28"> 
+      <!-- header logo -->
+      <img class="logo" src="/pics/parkomp_logo.png" alt="ParKOMP_logo" height="32" width="165">
+
+      <!-- user -->
+      <div>
+        <!-- logout button -->
+        <form action="/logout?_method=DELETE" method="POST">
+          <a href="javascript:;" onclick="parentNode.submit();" class="logout">
+            <img class="logout_pic" src="/pics/logout.png" alt="logout" height="25" width="25">
+          </a>
+        </form>
+        <!-- username -->
+        <h1 class="name"><%= name %></h1>
+      </div>
+    </div>
+    
+    <div id="main" style="min-height: 100vh;">
+      <div class="cars_label">
+        <h1><%= l.m_cars %></h1>
+      </div>
+      
+      <!--In case of no records display tile2 else display records with tile-->
+      <% if(items.length == 0){ %>
+        <div class="tile2">
+          <h1 style="font-size: 15px;text-align: center;vertical-align: middle;line-height: 55px;"><%= l.empty %></h1>
+        </div>
+      <% }else{ %>  
+        <% items.forEach((itm) =>{ %>
+          <div class="tile">
+            <div class ="tile_btns">
+              <a href="/edit/<%= itm.id %>" class="tile_edit"></a>
+              <a href="/delete/<%= itm.id %>" class="tile_delete"></a>
+            </div>
+            <h1 class="tile_carname_label"><%= l.lbl_car_name %></h1>
+            <h1 class="tile_plate_label"><%= l.lbl_plate %></h1>
+            <div class="tile_noline"></div>
+            <div class="tile_line"></div>
+            <h1 class="tile_car_name"><%= itm.name %></h1>
+            <h1 class="tile_lp"><%= itm.lic_plate %></h1>
+          </div>
+      <% })} %>
+    </div>
+
+    <!-- add button -->
+    <a href="/add">
+      <div class="add">
+        <img class="add_pic" src="/pics/more.png" alt="more" height="46" width="46">
+      </div>
+    </a>
+
+    <!-- cookie banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none">
+      <p style="float:left; margin-left: 15px;margin-bottom: 0px;"><%= l.cookie1 %> <a href='/policy'><%= l.cookie2 %></a>.</p>
+      <button class="close" onclick="close_click()">&times;</button>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+      <!-- footer copyright -->
+      <h1 class="footer_text">
+        &copy; <%= l.footer %>
+      </h1>
+    </div>
+
+    <!-- menu side nav -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:;" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/"><%= l.m_home %></a>
+      <a href="/cars"><%= l.m_cars %></a>
+      <a href="#"><%= l.m_about %></a>
+      <a href="#"><%= l.m_contact %></a>
+    </div>
+  </body>
+</html>
+
+

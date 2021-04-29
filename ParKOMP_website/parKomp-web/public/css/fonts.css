@@ -1,0 +1,14 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'jetbrains_monoextra_bold';
+    src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2'), url('fonts/JetBrainsMono-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jetbrains_monoregular';
+    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2'), url('fonts/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

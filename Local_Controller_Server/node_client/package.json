@@ -1,0 +1,22 @@
+{
+  "name": "node_client",
+  "version": "2.0.0",
+  "description": "This is the server which connects with the main server and manages multiple cameras and IP barriers on local level. The program is responsible for interacting with the FastAPI LPR System Server",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Yordan Yordanov",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "infinite-loop": "^0.2.2",
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.4",
+    "socket.io-client": "^3.0.3",
+    "ws": "^7.4.0"
+  }
+}

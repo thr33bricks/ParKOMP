@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+    <title>ParKOMP - Parking of the future</title>
+    <link type="text/css" rel="stylesheet" href="/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/css/style_form.css">
+    <link rel='icon' type='image/png' href='/pics/favicon.png'>
+  </head>
+  <body style="overflow: hidden;">
+    <!-- logo -->
+    <img class="logo" src="/pics/parkomp_logo.png" alt="ParKOMP_logo" height="54" width="276">
+    
+    <div style="min-height: 100%;">
+        <!-- add form -->
+        <form name="addForm" class="box" action="/add" method="post">
+        <h1><%= l.lbl_add %></h1>
+  
+        <% if (messages.car_name) { %>
+          <input type="text" id="car_name" name="car_name" placeholder="<%= l.ph_car_name %>" value="<%= messages.car_name %>" required>
+        <% }else{%>
+          <input type="text" id="car_name" name="car_name" placeholder="<%= l.ph_car_name %>" required>
+        <% } %>
+
+        <% if (messages.lp) { %>
+          <input type="text" id="lp" name="lp" placeholder="<%= l.ph_lp %>" value="<%= messages.lp %>" required>
+        <% }else{%>
+          <input type="text" id="lp" name="lp" placeholder="<%= l.ph_lp %>" required>
+        <% } %>
+  
+        <% if (messages.error) { %>
+           <label class="error "for="error"><%= messages.error %></label>
+           <br></br>
+        <% } %>
+  
+        <input type="submit" name="" value=<%= l.btn_save %>>
+        <input type="button" class="cancel" onclick="location.href='/cars';" value="<%= l.btn_cancel %>"/>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <!-- footer copyright -->
+      <h1 class="footer_text">
+        &copy; <%= l.footer %>
+      </h1>
+    </div>
+  </body>
+</html>
